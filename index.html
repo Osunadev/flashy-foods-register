@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Flashy Foods Sugerencias</title>
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto+Condensed&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css?family=Lexend+Deca&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="options-menu">
+				<img class="options-menu__option" src="./imgs/zuhause.png" alt="home" />
+				<img
+					class="options-menu__option"
+					src="./imgs/eingeben.png"
+					alt="signin"
+				/>
+				<img
+					class="options-menu__option options-menu__option--selected"
+					src="./imgs/blog.png"
+					alt="register"
+				/>
+			</div>
+
+			<!-- Button to see the register results -->
+			<div class="show-results">
+				<a class="show-results__link" href="#register-results">VER RESULTADOS</a>
+			</div>
+
+			<div class="panel">
+				<h1 class="panel__title">CREAR UNA CUENTA</h1>
+				<div class="panel__container">
+					<div class="panel__name">
+						<div class="panel__element">
+							<h1 class="panel__element__text">NOMBRE(S)</h1>
+							<input class="panel__element__input" type="text" id="name"/>
+						</div>
+						<div class="panel__element">
+							<h1 class="panel__element__text">APELLIDO(S)</h1>
+							<input class="panel__element__input" type="text" id="lastname"/>
+						</div>
+						<div class="panel__element">
+							<h1 class="panel__element__text">APODO</h1>
+							<input class="panel__element__input" type="text" id="nickname"/>
+						</div>
+					</div>
+
+					<div class="panel__personal-info">
+						<div class="panel__element">
+							<h1 class="panel__element__text">FECHA DE NACIMIENTO</h1>
+							<input class="panel__element__input" type="date" id="birthdate"/>
+						</div>
+						<div class="panel__element">
+							<h1 class="panel__element__text">PESO</h1>
+							<input
+								class="panel__element__input"
+								type="number"
+								placeholder="kg"
+								id="weight"
+							/>
+						</div>
+						<div class="panel__element">
+							<h1 class="panel__element__text">ESTATURA</h1>
+							<input
+								class="panel__element__input"
+								type="number"
+								placeholder="cm"
+								id="height"
+							/>
+						</div>
+					</div>
+
+					<div class="panel__password-register">
+						<div class="panel__password">
+							<div class="panel__element panel__element--large">
+								<h1 class="panel__element__text">CONSTRASEÑA</h1>
+								<input class="panel__element__input" type="password" id="pass"/>
+							</div>
+							<div class="panel__element  panel__element--large">
+								<h1 class="panel__element__text">REPETIR CONSTRASEÑA</h1>
+								<input class="panel__element__input" type="password" id="confirm-pass"/>
+							</div>
+						</div>
+
+						<div class="panel__register">
+							<button class="panel__register__button" onclick="register()">REGISTRAR</button>
+	
+							<div class="register__container__question">
+								<p class="panel__register__question">¿Ya tienes una cuenta?</p>
+								<a class="panel__register__link" href="https://www.figma.com/">INICIA SESIÓN</a>
+							</div>
+							</p>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<div class="register-results" id="register-results">
+
+			<table id="table-results">
+				<thead>
+					<th>NOMBRE(S)</th>
+					<th>APELLIDO(S)</th>
+					<th>APODO</th>
+					<th>FECHA DE NAC.</th>
+					<th>PESO</th>
+					<th>ESTATURA</th>
+					<th>CONSTRASEÑA</th>
+				</thead>
+			</table>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>

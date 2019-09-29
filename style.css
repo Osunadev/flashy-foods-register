@@ -1,0 +1,215 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: 'Roboto', sans-serif;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: 0.7fr repeat(4, 1fr) 0.7fr;
+	grid-template-rows: 0.5fr 0.6fr 2fr 2fr 0.5fr;
+	width: 100vw;
+	height: 100vh;
+
+	background: linear-gradient(240.27deg, #73a900 0%, #e2da18 100.61%);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.options-menu {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 0 5rem 1rem 0;
+
+	grid-column: 2 / span 2;
+	grid-row: 2;
+}
+
+.options-menu__option {
+	max-height: 100%;
+	max-width: 100%;
+	opacity: 1;
+	cursor: pointer;
+}
+
+.show-results {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	grid-column: 4 / span 2;
+	grid-row: 2;
+}
+
+.show-results__link {
+	text-decoration: none;
+	font-size: 2rem;
+	color: white;
+}
+
+.options-menu__option--selected {
+	opacity: 0.7;
+}
+
+.panel {
+	grid-row: 3 / span 2;
+	grid-column: 2 / span 4;
+	border-radius: 40px;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+	background: white url('./imgs/REGISTRO-BACKGND.png');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+.panel__title {
+	font-family: 'Lexend Deca', sans-serif;
+	text-align: center;
+	padding: 2rem 0 0 1rem;
+	font-weight: 900;
+	font-size: 55px;
+	line-height: 64px;
+}
+
+.panel__container {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+
+	font-family: 'Roboto Condensed', sans-serif;
+	margin: 1rem;
+}
+
+.panel__element {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 0 1rem 1.5rem;
+	width: 33.3%;
+}
+
+.panel__element__input {
+	width: 80%;
+	background: rgba(196, 196, 196, 0.21);
+	border-radius: 20px;
+	border: none;
+
+	font-size: 1.2rem;
+	color: rgba(124, 124, 124);
+	padding: 1rem;
+	margin-top: 0.5rem;
+}
+
+/* This is an h1 tag*/
+.panel__element__text {
+	color: rgba(0, 0, 0, 0.5);
+	font-size: 1.5rem;
+	font-weight: normal;
+}
+
+/* Different sections of our register panel */
+
+.panel__name {
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.panel__personal-info {
+	display: flex;
+	justify-items: center;
+	width: 100%;
+}
+
+.panel__password-register {
+	display: flex;
+	widows: 100%;
+}
+
+.panel__password {
+	display: flex;
+	flex-direction: column;
+	width: 33.3%;
+}
+
+.panel__element--large {
+	width: 100%;
+}
+
+.panel__register {
+	display: flex;
+	width: 40%;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 2rem;
+}
+
+.panel__register__button {
+	width: 90%;
+	background: #adb45d;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border: none;
+	border-radius: 50px;
+	font-weight: 600;
+	margin-bottom: 1rem;
+	padding: 1rem;
+	font-size: 2rem;
+	color: #ffffff;
+	text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	cursor: pointer;
+}
+
+.register__container__question {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.panel__register__question {
+	font-family: Roboto;
+	font-weight: 200;
+	font-size: 1.5rem;
+	line-height: 29px;
+	color: rgba(124, 124, 124);
+}
+
+.panel__register__link {
+	font-family: Roboto;
+	font-size: 1.3rem;
+	line-height: 29px;
+	color: #75850e;
+	text-decoration: none;
+}
+
+/* REGISTER RESULTS */
+
+.register-results {
+	width: 100vw;
+	height: 100vh;
+	background: lightgoldenrodyellow;
+	padding: 1.5rem;
+	border: 1px solid black;
+
+	display: flex;
+	justify-content: center;
+}
+
+table,
+th,
+td {
+	border: 1px solid black;
+}
+
+table {
+	width: 90%;
+	text-align: center;
+}
+
+th,
+td {
+	padding: 1rem;
+}
